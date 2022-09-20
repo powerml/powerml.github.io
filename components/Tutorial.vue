@@ -25,7 +25,7 @@
                           </div>
                         </form>
                         <div class="flex mb-4">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-8 px-32 rounded"
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-32 rounded"
                             @click="submit('some email')" v-if="notSubmitted">
                             See PowerML
                         </button>
