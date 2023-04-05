@@ -40,11 +40,15 @@ To get started, simply import our API client and initialize it with your API key
 ```python
 from llama import LLM
 
-llm = LLM(name="marketing",
-          config={ "production" :
-            { "key" : <YOUR-KEY-HERE>,
-            "url": "https://api.powerml.co" }
-          })
+llm = LLM(
+    name="marketing",
+    config={
+        "production": {
+            "key": "<YOUR-KEY-HERE>",
+            "url": "https://api.powerml.co",
+        }
+    },
+)
 ```
 
 After you've set up, it's time to flex your coding skills by making some epic calls to our API! You'll be a pro in no time!
