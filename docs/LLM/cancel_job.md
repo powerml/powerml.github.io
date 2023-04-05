@@ -1,4 +1,4 @@
-# LLM.cancel_job
+# llama.LLM.cancel_job
 
 Cancel a job
 

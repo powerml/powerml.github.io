@@ -1,4 +1,4 @@
-# LLM.check_job_status
+# llama.LLM.check_job_status
 
 Check the status of a job
 
