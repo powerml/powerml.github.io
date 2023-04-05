@@ -23,10 +23,16 @@ llm = LLM(name="my_llm_name")
 
 # With optional parameters
 llm = LLM(
-        name="my_llm_name", 
-        model_name="chat-gpt", 
-        config={"token": "my_token"}
-      )
+    name="my_llm_name",
+    model_name="chat-gpt",
+    config={
+        "production": {
+            "key": "A very very very long string",
+            "url": "https://api.powerml.co",
+        }
+    },
+)
+
 ```
 
 ## Call
@@ -58,7 +64,7 @@ my_output = llm(my_input, output_type=MyOutputType)
 #
 # Type and Context
 
-Type is a base class to extend for creating a structured type for input or output into the LLM. 
+Type is a base class to extend for creating a structured type for input or output into the LLM.
 
 
 ## Usage
@@ -112,7 +118,7 @@ llm.add_data([[input_data, output_data], [more_input_data, more_output_data], ..
 
 ## Parameters
 
-- data: `<class 'llama.types.type.Type'>` or `List[<class 'llama.types.type.Type'>]` or `List[List[<class 'llama.types.type.Type'>]]` - data structured as `Type`'s, grouped in lists because they're related to each other, and added in bulk through lists. 1-100k data elements are recommended at a time. 
+- data: `<class 'llama.types.type.Type'>` or `List[<class 'llama.types.type.Type'>]` or `List[List[<class 'llama.types.type.Type'>]]` - data structured as `Type`'s, grouped in lists because they're related to each other, and added in bulk through lists. 1-100k data elements are recommended at a time.
 
 ## Example
 
@@ -141,15 +147,15 @@ llm.improve(on, to)
 
 ## Parameters
 
-- on: `str` - attribute in an output's `Type` to improve on 
-- to: `str` - natural language description of how to improve the LLM 
+- on: `str` - attribute in an output's `Type` to improve on
+- to: `str` - natural language description of how to improve the LLM
 
 ## Example
 ```python
 llm.improve(on="speed", to="give the average speed, not the max speed")
 ```
 
-# 
+#
 ## Full example
 
 Start with data
