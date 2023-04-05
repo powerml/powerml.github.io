@@ -1,4 +1,4 @@
-# Batch Interface
+# Batching
 
 Sometimes you'd like to submit a lot of input data for processing. Our batching interface
 is the best way to do so. This interface is not constrained by our API timeout.
