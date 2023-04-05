@@ -1,4 +1,4 @@
-# LLM.get_job_results
+# llama.LLM.get_job_results
 
 Get the job results
 

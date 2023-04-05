@@ -1,4 +1,4 @@
-# LLM.submit_job
+# llama.LLM.submit_job
 
 Submits a job for processing.
 
