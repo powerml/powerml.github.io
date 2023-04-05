@@ -34,3 +34,4 @@ nav:
           - check_job_status: LLM/check_job_status.md
           - get_job_results: LLM/get_job_results.md
           - cancel_job: LLM/cancel_job.md
+          - sample: LLM/sample.md
