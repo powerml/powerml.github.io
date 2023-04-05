@@ -31,8 +31,8 @@ llm = LLM(name="animal_stories")
 
 # If you want to use a different base model or add your config options here
 llm = LLM(
-        name="animal_stories", 
-        model_name="chat-gpt", 
+        name="animal_stories",
+        model_name="chat-gpt",
         config={"token": "my_token"}
       )
 ```
@@ -121,5 +121,3 @@ story = llm(llama_animal, output_type=Story)
 ```
 
 A common workflow is to run the LLM engine and see issues in the LLM outputs, then add an improve statement and run the LLM engine again.
-
-

@@ -13,3 +13,19 @@ markdown_extensions:
     - pymdownx.inlinehilite
     - pymdownx.snippets
     - pymdownx.superfences
+theme: material
+
+# Page tree
+nav:
+  - Getting Started: index.md
+  - Authentication: auth.md
+  - Walkthrough Example: example.md
+  - Python Library: python_library.md
+  - Batching: batching.md
+  - Error Handling: error_handling.md
+  - Advanced Llama Functionality: advanced.md
+  - LLM:
+    - Submit Job: LLM/submit_job.md
+    - Check Job Status: LLM/check_job_status.md
+    - Get Job Results: LLM/get_job_results.md
+    - Cancel Job: LLM/cancel_job.md
