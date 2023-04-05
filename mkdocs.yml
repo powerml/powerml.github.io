@@ -17,10 +17,9 @@ theme: material
 
 # Page tree
 nav:
-  - Home: index.md
-  - Getting Started: getting_started.md
-  - Walkthrough Example: example.md
+  - Getting Started: index.md
   - Authentication: auth.md
+  - Walkthrough Example: example.md
   - Python Library: python_library.md
   - Batching: batching.md
   - Error Handling: error_handling.md
