@@ -1,10 +1,8 @@
-# Llama++: Advanced Llama Functionality
+# Advanced
 
 Now that you've got the basics, it's time to power up your llama!
 
-## Generate varied output
-
-### random
+## Generate Varied Output
 
 In the Llama walkthrough, you generated ad copy using the below:
 
@@ -41,7 +39,7 @@ Running this multiple times should assign the same value to `ad_copy`. But what 
 ad_copy = llm(input=aspects, output_type=AdCopy, random=True)
 ```
 
-### llm.sample
+## Remove Duplicates
 
 `random` is great for inducing some variety, but what if you want to remove duplicates across copies? You can use `llm.sample` to produce a list of outputs that are all different from each other:
 
@@ -55,7 +53,7 @@ You can also use `llm.sample` to ensure variation across attributes within a sin
 ad_copy = llm.sample(input=aspects, output_type=AdCopy, n=1)[0]
 ```
 
-## Add output scores
+## Add Output Scores
 
 Now you can generate varied outputs, but how do you compare between them? You can do so by generating scores! First, update your output type to include the score you wish to generate:
 
