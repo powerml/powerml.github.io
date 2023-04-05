@@ -8,7 +8,7 @@ Results are made available at set intervals as portions of the job are completed
 llm = LLM(name="batch_example")
 ```
 
-## LLM.submit_job
+## Submitting a job
 
 Begin by submitting a job for processing. Upon submission, a job id will be returned.
 
@@ -16,7 +16,7 @@ Begin by submitting a job for processing. Upon submission, a job id will be retu
 job = llm.submit_job(self, input, output_type, *args, **kwargs)
 ```
 
-## LLM.check_job_status
+## Checking the status of a job
 
 Use this utility to check the status of a job.
 
@@ -42,7 +42,7 @@ Possible statuses include
 -   `ERRORED` - Job encountered an error. This job will be retried and rescheduled automatically.
 -   `CANCELED` - Job was canceled. Submit another job.
 
-## LLM.get_job_results
+## Get job results
 
 Once the job is completed, or once progress has been made, get those results with this utility.
 
@@ -50,7 +50,7 @@ Once the job is completed, or once progress has been made, get those results wit
 results = llm.get_job_results(job_id, output_type)
 ```
 
-## LLM.cancel_job
+## Cancelling a job
 
 At any point in the job execution, you can cancel the running job.
 
