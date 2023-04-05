@@ -31,10 +31,15 @@ llm = LLM(name="animal_stories")
 
 # If you want to use a different base model or add your config options here
 llm = LLM(
-        name="animal_stories",
-        model_name="chat-gpt",
-        config={"token": "my_token"}
-      )
+    name="my_llm_name",
+    model_name="chat-gpt",
+    config={
+        "production": {
+            "key": "<API-KEY-HERE>",
+            "url": "https://api.powerml.co",
+        }
+    },
+)
 ```
 
 Now, you can now run your LLM.
