@@ -24,7 +24,7 @@ nav:
     - Python Library: python_library.md
     - Batching: batching.md
     - Error Handling: error_handling.md
-    - Advanced Llama Functionality: advanced.md
+    - Advanced: advanced.md
     - LLM:
           - __init__: LLM/__init__.md
           - __call__: LLM/__call__.md
