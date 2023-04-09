@@ -34,7 +34,7 @@ See the [Authentication](/auth) page for more advanced options.
 Run the LLM engine with a basic test to see if installation and authentication were set up correctly.
 
 ```python
-from llama import LLM
+from llama import LLM, Type, Context
 
 class Test(Type):
     test_string: str = Context("just a test")
