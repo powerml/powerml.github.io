@@ -1,4 +1,4 @@
-site_name: Llama
+site_name: ""
 
 theme:
     name: material
@@ -6,7 +6,7 @@ theme:
         - content.code.copy
         - navigation.instant
         - navigation.tracking
-
+    logo: assets/logo.png
     palette:
         # Palette toggle for automatic mode
         - media: "(prefers-color-scheme)"
