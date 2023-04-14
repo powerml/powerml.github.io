@@ -24,8 +24,8 @@ class AdAspects(Type):
   goal: str = Context("goal of this marketing campaign and message")
 
 class AdCopy(Type):
-  h1: str = Context("google ad h1 tag")
   title: str = Context("google ad title tag")
+  description: str = Context("google ad description")
   keywords: list = Context("keywords for the search engine")
 ```
 
