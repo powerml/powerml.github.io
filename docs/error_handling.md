@@ -10,7 +10,7 @@ Here are some ways in which you can resolve Internal Server 500 error:
 
 1. Update the lamini python package to the most recent version: Make sure that you are using supported python version. Supported python version are 3.7 to 3.11.
 
-    1. Download the most recent python client from [Llama python package](https://pypi.org/project/lamini).
+    1. Download the most recent python client from [Lamini python package](https://pypi.org/project/lamini).
 
     2. You can update your Python version by downloading the latest version from the [Python website](https://www.python.org/downloads/) and running the installer.
 

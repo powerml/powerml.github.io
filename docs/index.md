@@ -2,15 +2,15 @@
 
 ## Installation
 
-Llama can be installed using pip, the package manager for Python. To install Llama, open a command prompt and type:
+Lamini can be installed using pip, the package manager for Python. To install Lamini, open a command prompt and type:
 
 ```sh
 pip install lamini
 ```
 
-This will download and install the latest version of Llama and its dependencies.
+This will download and install the latest version of Lamini and its dependencies.
 
-Check if your installation was done correctly, by importing the LLM engine in your python interpreter.
+Check if your installation was done correctly, by importing the llama LLM engine in your python interpreter.
 
 ```python
 >> from llama import LLM
