@@ -8,9 +8,9 @@ To keep your API key safe, production requests should always be routed through y
 
 Llama offers several ways to provide your API key:
 
- * [Config file](#config-file)
- * [Python API](#python-api)
- * [Authorization HTTP header](#authorization-http-header)
+-   [Config file](#config-file)
+-   [Python API](#python-api)
+-   [Authorization HTTP header](#authorization-http-header)
 
 ### Config file
 
@@ -25,7 +25,7 @@ production:
     key: "<YOUR-KEY-HERE>"
 ```
 
-The best part? The [Llama python package](https://pypi.org/project/llama-llm) will automatically load your key from this config file for you, so you don't have to worry about it.
+The best part? The [Llama python package](https://pypi.org/project/lamini) will automatically load your key from this config file for you, so you don't have to worry about it.
 
 If you're running Llama in a docker container, make sure to copy/mount this file inside the container.
 
@@ -75,7 +75,7 @@ If you're running a large organization and need to manage multiple users on the 
 We got your back when it comes to integrating with Google Colab, no sweat. Say goodbye to storing your API key in a notebook, and say hello to our effortless snippet for automatic login:
 
 ```python
-# @title Setup: Authenticate with Google & install the open-source [Llama library](https://pypi.org/project/llama-llm) to use LLMs easily
+# @title Setup: Authenticate with Google & install the open-source [Llama library](https://pypi.org/project/lamini) to use LLMs easily
 %%capture
 
 from google.colab import auth
@@ -90,7 +90,7 @@ def authenticate_powerml():
   return powerml_token_response.json()['token']
 
 production_token = authenticate_powerml()
-!pip install --upgrade --force-reinstall --ignore-installed llama-llm
+!pip install --upgrade --force-reinstall --ignore-installed lamini
 
 keys_dir_path = '/root/.powerml'
 os.makedirs(keys_dir_path, exist_ok=True)
@@ -119,4 +119,3 @@ If you need flexibility and scalability for large-scale applications, the Python
 The Authorization HTTP header method is for the big boys, the ones with larger-scale apps and stringent security requirements. This method is secure because the API key isn't stored in plain text, but it requires additional implementation effort to set up correctly. Plus, managing and rotating API keys can be a real pain in the butt.
 
 In the end, you'll have to weigh the pros and cons of each method to determine which one is the best fit for your needs. Just remember, always keep your API key safe and secure like a secret meme stash.
-
