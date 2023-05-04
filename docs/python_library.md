@@ -1,6 +1,6 @@
 # Python library
 
-Lamini is a Python package designed to build Language Learning Models (LLMs) for natural language processing tasks. It provides an engine for creating and running your own LLMs. With Lamini, you can train language models on large text corpora and improve them following your guidelines, which can then be used for generating and extracting text.
+Lamini Library is a Python package designed to build Language Learning Models (LLMs) for natural language processing tasks. It provides an engine for creating and running your own LLMs. With Lamini, you can train language models on large text corpora and improve them following your guidelines, which can then be used for generating and extracting text.
 
 ## Input and output types
 
