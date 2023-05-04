@@ -42,7 +42,6 @@ markdown_extensions:
 
 # Page tree
 nav:
-    - Python Library Old: python_library.md
-    - Python Library New: python_library_v2.md
     - Lamini API: lamini_api.md
+    - Python Library: python_library_v2.md
     - Lamini Query Language: lamini_ql.md

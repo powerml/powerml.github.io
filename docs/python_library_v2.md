@@ -1,6 +1,6 @@
-# Python library V2
+# Python Library
 
-Lamini Library V2 is a Python package designed to build Language Learning Models (LLMs) for natural language processing tasks. It provides an engine for creating and running your own LLMs. With Lamini, you can train language models on large text corpora and improve them following your guidelines, which can then be used for generating and extracting text.
+Lamini Library is a Python package designed to build Language Learning Models (LLMs) for natural language processing tasks. It provides an engine for creating and running your own LLMs. With Lamini, you can train language models on large text corpora and improve them following your guidelines, which can then be used for generating and extracting text.
 
 ## Input and output types
 
@@ -15,44 +15,45 @@ from llama import Type, Context
 
 class UserQuery(Type):
     text: str = Context("what is the user's intent")
-
-class ThoughtOutput(Type):
-    has_url: str = Context(
-        "whether the user's intent contains a URL. Boolean: true or false")
-    process: str = Context("step by step reasoning process")
-    thought: str = Context("final thought")
 ```
 
-Each `Type` requires at least one attribute, such as `name` and `n_legs` here. They can be anything you would like. Be sure to add a `Context` field to each attribute, with a natural language description of the attribute. That is required to tell the model what you mean by each attribute.
+Each `Type` requires at least one attribute, such as `text` here. They can be anything you would like. Be sure to add a `Context` field to each attribute, with a natural language description of the attribute. That is required to tell the model what you mean by each attribute.
 
 ## Running the LLM
 
 Next, you want to instantiate your LLM engine with `LLM`.
 
 ```python
-llm = LLM(name="animal_stories")
-
-# If you want to use a different base model or add your config options here
-llm = LLM(
-    name="my_llm_name",
-    model_name="chat-gpt",
-    config={
-        "production": {
-            "key": "<API-KEY-HERE>",
-        }
-    },
-)
+llm = LLM(name="chatbot")
 ```
 
 Now, you can now run your LLM.
 
 ```python
 # Define an output type
-class Story(Type):
-    story: str = Context("Story of an animal")
+class ThoughtOutput(Type):
+    has_url: str = Context(
+        "whether the user's intent contains a URL. Boolean: true or false")
+    process: str = Context("step by step reasoning process")
+    thought: str = Context("final thought")
 
-llama_animal = Animal(name="Larry", n_legs=4)
-llama_story = llm(llama_animal, output_type=Story)
+user_query = UserQuery(text="Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.")
+thought_output = llm(user_query, output_type=ThoughtOutput)
 ```
 
 ## Training a LLM
+
+You can train a LLM as follows:
+
+```python
+data = load_data()
+
+llm = LLM(name="chatbot")
+
+job = llm.submit_training_job(
+    data=data,
+)
+
+status = llm.check_job_status(job.id)
+
+```

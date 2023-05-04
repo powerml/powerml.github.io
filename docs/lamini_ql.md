@@ -20,14 +20,12 @@ Each `Type` requires at least one attribute, such as `text` here. They can be an
 
 ## Running the LLM
 
-Next, you want to instantiate your LLM engine with `LLM`.
-
 ```javascript
 var { laminiql, buildSchema } = require("laminiql");
 
 var inputSchema = buildSchema(`
     type UserQuery {
-        name: str: "name of the animal"
+        text: str: "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table."
     }
 `);
 
@@ -80,6 +78,41 @@ You should see the LaminiQL response printed out:
 ```
 
 ## Training a LLM
+
+```javascript
+var { laminiTrain, buildSchema } = require("laminiql");
+
+var inputSchema = buildSchema(`
+    type UserQuery {
+        text: str: "name of the animal"
+    }
+`);
+
+var outputSchema = buildSchema(`
+    type ThoughtOutput {
+        has_url: str: "whether the user's intent contains a URL. Boolean: true or false"
+        process: str: "step by step reasoning process"
+        thought: str: "final thought"
+    }
+`);
+
+laminiTrain({
+    inputSchema,
+    outputSchema,
+    data: [{
+        "UserQuery": {
+            "text": "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.",
+        },
+        "ThoughtOutput": {
+            "has_url": false,
+            "process": "I need to brainstorm 20 headlines|there is no url|thus",
+            "thought": "I need to write"
+        }
+    }, ... ],
+}).then((response) => {
+    console.log(response);
+});
+```
 
 If you run this with
 

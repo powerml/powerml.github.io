@@ -108,7 +108,7 @@ curl https://api.lamini.ai/v1/llama/run_program \
                     },
                 },
             }
-            "examples": [{
+            "data": [{
                 "UserQuery": {
                     "text": "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.",
                 },
