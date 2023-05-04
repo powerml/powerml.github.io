@@ -5,7 +5,7 @@ Lamini API is an API designed to build Language Learning Models (LLMs) for natur
 ## Running the LLM
 
 ```
-POST https://api.lamini.ai/v1/llama/run_program
+POST https://api.lamini.ai/v1/llama/predict
 ```
 
 Runs a lamini program.
@@ -13,7 +13,7 @@ Runs a lamini program.
 Example Request
 
 ```curl
-curl https://api.lamini.ai/v1/llama/run_program \
+curl https://api.lamini.ai/v1/llama/predict \
     -H "Content-Type: application/json"
     -H "Authorization: Bearer $LAMINI_API_KEY" \
     -d '{
@@ -76,7 +76,7 @@ Trains a lamini program.
 Example Request
 
 ```curl
-curl https://api.lamini.ai/v1/llama/run_program \
+curl https://api.lamini.ai/v1/llama/train \
     -H "Content-Type: application/json"
     -H "Authorization: Bearer $LAMINI_API_KEY" \
     -d '{
