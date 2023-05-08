@@ -17,20 +17,15 @@ curl https://api.lamini.ai/v1/llama/predict \
     -H "Content-Type: application/json"
     -H "Authorization: Bearer $LAMINI_API_KEY" \
     -d '{
-            "input_value": {
-                "data": {
-                    "text": "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.",
+            "input_type": {
+                "title": "UserQuery",
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "description": "what is the user's intent",
+                        "type": "string"
+                    }
                 },
-                "type": {
-                    "title": "UserQuery",
-                    "type": "object",
-                    "properties": {
-                        "text": {
-                            "description": "what is the user's intent",
-                            "type": "string"
-                        }
-                    },
-                }
             },
             "output_type": {
                 "title": "ThoughtOutput",
@@ -49,7 +44,10 @@ curl https://api.lamini.ai/v1/llama/predict \
                         "type": "string"
                     },
                 },
-            }
+            },
+            "input_data": {
+                "text": "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.",
+            },
         }'
 ```
 

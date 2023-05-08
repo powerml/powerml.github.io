@@ -24,7 +24,7 @@ Each `Type` requires at least one attribute, such as `text` here. They can be an
 Next, you want to instantiate your LLM engine with `LLM`.
 
 ```python
-llm = LLM(name="chatbot")
+llm = LLM.from_model_name(name="chatbot")
 ```
 
 Now, you can now run your LLM.
