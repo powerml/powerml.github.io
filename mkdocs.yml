@@ -1,47 +1,45 @@
 site_name: ""
 
 theme:
-    name: material
-    features:
-        - content.code.copy
-        - navigation.instant
-        - navigation.tracking
-    logo: assets/logo.png
-    palette:
-        # Palette toggle for automatic mode
-        - media: "(prefers-color-scheme)"
-          toggle:
-              icon: material/brightness-auto
-              name: Switch to light mode
+  name: material
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+  logo: assets/logo.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
-        # Palette toggle for light mode
-        - media: "(prefers-color-scheme: light)"
-          scheme: default
-          toggle:
-              icon: material/brightness-7
-              name: Switch to dark mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
-        # Palette toggle for dark mode
-        - media: "(prefers-color-scheme: dark)"
-          scheme: slate
-          toggle:
-              icon: material/brightness-4
-              name: Switch to system preference
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 extra_css:
-    - stylesheets/extra.css
+  - stylesheets/extra.css
 
 markdown_extensions:
-    - pymdownx.highlight:
-          anchor_linenums: true
-          line_spans: __span
-          pygments_lang_class: true
-    - pymdownx.inlinehilite
-    - pymdownx.snippets
-    - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 # Page tree
 nav:
-    - Lamini API: lamini_api.md
-    - Python Library: python_library_v2.md
-    - Lamini Query Language: lamini_ql.md
+  - Curl Commands: curl_commands.md

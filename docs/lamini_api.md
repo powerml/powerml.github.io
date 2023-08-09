@@ -2,7 +2,7 @@
 
 Lamini API is an API designed to build Language Learning Models (LLMs) for natural language processing tasks. It makes the Lamini engine available for creating and running your own LLMs. With Lamini API, you can train language models on large text corpora and improve them following your guidelines, which can then be used for generating and extracting text.
 
-## Running the LLM
+## Running a LLM
 
 ```
 POST https://api.lamini.ai/v1/llama/predict
@@ -48,6 +48,7 @@ curl https://api.lamini.ai/v1/llama/predict \
             "input_data": {
                 "text": "Brainstorm 20 compelling headlines for a Facebook ad promoting the Best Business Financing Options for [Business Owners]. Format the output as a table.",
             },
+            "model_id": "016e58edfaff06aee4630d4fa21933feacc39981"
         }'
 ```
 
